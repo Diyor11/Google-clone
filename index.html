@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Accordion</title>
+    </head>
+    <body>
+        <!-- <section>
+            <h1>Animation</h1>
+        </section> -->
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div> 
+        <script>
+            const CONTEXT_KEY = "344518b235096fb90";
+// const API_KEY = 'AIzaSyC8RjO_ewdQ1f8GbZp8kkALTY4EWfacCmo';
+const API_KEY = "AIzaSyAFjOM6FuYQElINKCSITwvWmj0Mw5oA0ik";
+
+const fetchData = async (query) => {
+        fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${query}`)
+        .then(res => res.json())
+        .then(js => console.log(js))
+}
+
+fetchData('leo')
+
+
+
+        </script>
+    </body>
+</html>

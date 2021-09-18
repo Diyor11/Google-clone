@@ -1,0 +1,223 @@
+#search-page{
+    width: 100%;
+    min-height: 100vh;
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 37px 29px 0;
+        .left-side{
+            display: flex;
+            align-items: center;
+            .img-wrap{
+                img{
+                    width: 90px;
+                    margin-right: 43px;
+                }
+            }
+            form{
+                border-radius: 25px;
+                padding: 7px 15px 11px;
+                padding-left: 20px;
+                box-shadow: 0.4px 0.6px 5px 0.25px #999;
+                input{
+                    width: 600px;
+                    outline: none;
+                    border: none;
+                    font-size: 17px;
+                    color: #000;
+                }
+                .fas{
+                    font-size: 18px;
+                    color: #777;
+                    padding: 0 12px;
+                    cursor: pointer;
+                }
+                .fa-times{
+                    border-right: 0.5px solid #888;
+                }
+                .fa-search{color: #4D8CF4;}
+                .fa-microphone{color: #4285F4;}
+            }
+        }
+        .settings{
+            .fas{
+                color: #444;
+                font-size: 19px;
+                margin: 0 12px;
+            }
+            .fa-user-alt{
+                font-size: 18px;
+                background-color: #c0bebe;
+                border-radius: 50%;
+                padding: 6px;
+            }
+        }
+    }
+    .filter{
+        margin-top: 34px;
+        width: 100%;
+        border-bottom: 0.3px solid rgba(119, 119, 119, 0.3);
+        .box-wrapper{
+            width: fit-content;
+            margin: 0 auto 0 150px;
+            display: flex;
+            align-items: center;
+            .box{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                margin: 0 15px;
+                padding: 0 4px 5px;
+                color: #777;
+                &:nth-child(1){
+                    color: #4D8CF4;
+                    border-bottom: 3px solid #4285F4;
+                }
+                i{
+                    font-size: 15px;
+                    margin: 0 3.5px;
+                }
+                p{
+                    font-family: sans-serif;
+                    margin: 0;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .result{
+        margin: 12px auto 0 160px;
+        width: 650px;
+        .searchPage__result {
+            margin: 40px 0;
+            .searchPage__resultTitle {
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+                h2{
+                    font-weight: 400;
+                    color: #1a0dab;
+                }
+            }
+            .searchPage__resultLink {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: black;
+                margin-bottom: 3px;
+                .searchPage__resultImage {
+                    object-fit: contain;
+                    height: 20px;
+                    width: 20px;
+                    margin-right: 10px;
+                }
+            }
+            .searchPage__resultSnippet {
+                margin-top: 10px;
+            }
+        }
+    }
+    .pagination{
+        margin: 45px  auto 100px 65px;
+        display: block;
+        .top-row{
+            display: flex;
+            align-items: center;
+            img{
+                width: 150px;
+                margin-right: 35px;
+            }
+            .fas{
+                color: #6BB6FA;
+                font-size: 25px;
+            }
+        }
+        .down-row{
+            display: flex;
+            .numbers{
+                display: flex;
+                align-items: center;
+                padding: 0 7px;
+                margin-right: 15px;
+                p{
+                    cursor: pointer;
+                    padding: 0 3px;
+                    color: #6BB6FA;
+                    &:nth-child(1){
+                        color: #333;
+                    }
+                }
+            }
+            span{
+                color: #4285F4;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #search-page{
+        nav{
+            padding-left: 0;
+            padding-right: 0;
+            .settings{display: none;}
+            .left-side{
+                width: 100%;
+                display: block !important;
+                .img-wrap{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    img{
+                        width: 140px;
+                        margin-right: 0;
+                    }
+                }
+                form{
+                    display: flex;
+                    margin: 25px auto 0;
+                    width: 90%;
+                    input{
+                        width: 230px !important;
+
+                    }
+                    .dl{display: none;}
+                    i{
+                        padding: 4px 8px 0 !important;
+                    }
+                }
+            }
+        }
+        .filter{
+            .box-wrapper{
+                margin: 0 auto;
+                .box{
+                    margin: 0 6px 3px;
+                    i{display: none;}
+                }
+            }
+        }
+        .result{
+            margin: 12px auto 0;
+            width: 90%;
+            .pagination{
+                width: fit-content;
+                margin: 35px auto 0;
+            }
+        }
+    }
+    
+}
+
+
+
+  
+
+  
+  
+  
+ 
